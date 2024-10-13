@@ -1,0 +1,11 @@
+local:
+  dialect: postgres
+  datasource: host=localhost port=5432 user=kaivest password=kaivest dbname=kaivest sslmode=disable
+  dir: migrations/schemas
+  table: migrations
+
+production:
+  dialect: postgres
+  datasource: host=${POSTGRES_HOST} port=${POSTGRES_PORT} user=${POSTGRES_USER} password=${POSTGRES_PASSWORD} dbname=${POSTGRES_DB}
+  dir: migrations/schemas
+  table: migrations
